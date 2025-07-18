@@ -26,5 +26,6 @@ end
 require "lazy_setup"
 require "polish"
 
-
+-- Custom stuff added by Bongo
+vim.opt.guifont = { "JetBrainsMono Nerd Font", ":h12" }
 vim.lsp.inlay_hint.enable(true)
