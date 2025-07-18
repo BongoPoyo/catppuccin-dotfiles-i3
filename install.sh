@@ -11,6 +11,12 @@ echo
 # Ensure ~/.config exists
 mkdir -p "$CONFIG_DIR"
 
+
+echo "Linking zsh files..."
+ln -sf "$SOURCE_DIR/.zshrc" "$HOME/.zshrc"
+ln -sf "$SOURCE_DIR/.zshenv" "$HOME/.zshenv"
+
+
 # Loop through every item in the dotfiles directory
 for item in "$DOTFILES_DIR"/*; do
   name=$(basename "$item")
