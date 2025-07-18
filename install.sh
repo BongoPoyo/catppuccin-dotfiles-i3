@@ -39,3 +39,6 @@ done
 
 echo "🎉 All done!"
 
+# Arch only
+echo "Download ttf-jetbrains-mono-nerd"
+sudo pacman -S ttf-jetbrains-mono-nerd
