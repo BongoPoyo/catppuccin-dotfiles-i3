@@ -13,9 +13,9 @@ select = "underline"
 hidden = false
 
 [editor.statusline]
-left = ["mode", "spinner"]
-center = ["file-name"]
-right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+left = ["mode", "spinner", "read-only-indicator"]
+center = ["file-name"] 
+right = ["diagnostics", "selections","register","position", "file-encoding", "file-line-ending", "file-type"]
 separator = "│"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
@@ -25,3 +25,8 @@ workspace-diagnostics = ["warning", "error"]
 
 [editor.lsp]
 display-inlay-hints = true
+display-progress-messages = true
+
+[editor.auto-save]
+focus-lost = true
+after-delay.enable = true
