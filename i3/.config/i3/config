@@ -19,6 +19,11 @@ exec --no-startup-id dex --autostart --environment i3
 # polybar's config is at ~/.config/polybar/
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 
+# mouse warp with focus
+exec_always --no-startup-id \
+  sh -c 'i3-msg -t subscribe "[\"window\"]" | \
+  jq -r "select(.change==\"focus\") | .container.rect | \"\\(.x + .width/2) \\(.y + .height/2)\"" | \
+  xargs -n2 xdotool mousemove'
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
