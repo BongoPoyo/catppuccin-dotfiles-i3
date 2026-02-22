@@ -53,7 +53,9 @@ done
 echo "🎉 All done!"
 
 # Arch only
+echo "Using pacman to install stuff..."
 echo "Downloading font"
+
 sudo pacman -S ttf-jetbrains-mono-nerd kitty
 
 echo "Downloading vim stuff"
