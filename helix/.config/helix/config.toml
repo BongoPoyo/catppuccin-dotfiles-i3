@@ -32,4 +32,14 @@ focus-lost = true
 after-delay.enable = true
 
 [keys.normal]
-C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+# lazy git
+A-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+# gitui (written in rust)
+C-g = [
+    ":write-all",
+    ":new",
+    ":insert-output gitui >/dev/tty",
+    ":buffer-close!",
+    ":redraw",
+    ":reload-all"
+]
