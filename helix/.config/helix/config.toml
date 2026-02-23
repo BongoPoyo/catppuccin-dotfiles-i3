@@ -43,3 +43,12 @@ C-g = [
     ":redraw",
     ":reload-all"
 ]
+# Compile and run using make
+C-r = [
+    ":write-all",
+    ":new",
+    ":insert-output make run > /dev/tty",
+    ":buffer-close!",
+    ":redraw",
+    ":reload-all"
+]
