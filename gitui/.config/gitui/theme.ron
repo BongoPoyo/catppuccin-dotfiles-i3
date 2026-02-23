@@ -1,8 +1,8 @@
 
 (
-    selected_tab: Some("Reset"),
+    selected_tab: Some("#f5c2e7"),//Some("Reset"),
     command_fg: Some("#cdd6f4"),
-    selection_bg: Some("#585b70"),
+    selection_bg:Some("#585b70"),
     selection_fg: Some("#cdd6f4"),
     cmdbar_bg: Some("#181825"),
     cmdbar_extra_lines_bg: Some("#181825"),
