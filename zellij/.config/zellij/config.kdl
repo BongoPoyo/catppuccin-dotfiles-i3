@@ -1,8 +1,11 @@
 keybinds clear-defaults=true {
    normal {
-        bind "Ctrl r" {
+        bind "Alt r" {
             Run "make" "run" {
             }
+        }
+        bind "Alt q" {
+            CloseFocus;
         }
     }
 
