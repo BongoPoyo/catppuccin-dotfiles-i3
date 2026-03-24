@@ -8,3 +8,5 @@ export PATH="$HOME/.cargo/bin:$PATH"
 starship init fish | source
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+
+fish_add_path /home/bongo/.spicetify

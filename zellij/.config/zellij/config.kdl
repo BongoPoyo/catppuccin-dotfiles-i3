@@ -1,8 +1,8 @@
 keybinds clear-defaults=true {
    normal {
         bind "Alt r" {
-            Run "make" "run" {
-            }
+            // auto exit make when alt + q is pressed 
+            Run "sh" "-c" "trap 'exit' SIGTERM; make run"
         }
         bind "Alt q" {
             CloseFocus;
