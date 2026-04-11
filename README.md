@@ -13,7 +13,7 @@ These are mostly taken from others and edited to match my preferences.
 
 1. Generate an ssh-key 
 ```
-ssh-keygen -t ed25519 -C "bongopoyo@proton.me"
+ssh-keygen -t ed25519 -C "hashir447079@gmail.com"
 ```
 2. Start the agent
 ```
@@ -30,10 +30,10 @@ cat ~/.ssh/id_ed25519.pub
 ```
 5. Add git email and user name
 ```
-git config --global user.email "bongopoyo@proton.me"
+git config --global user.email "hashir447079@gmail.com"
 ```
 ```
-git config --global user.name "Bongo Poyo"
+git config --global user.name "Bongo"
 ```
 6. Enable ssh for github
 ```
