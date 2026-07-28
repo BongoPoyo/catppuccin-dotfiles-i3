@@ -3,6 +3,12 @@ theme = "catppuccin_mocha"
 [editor]
 line-number = "relative"
 mouse = true
+bufferline = "multiple"
+color-modes= true
+cursorline = true
+completion-timeout = 5
+auto-format = true
+popup-border = "all"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -13,15 +19,39 @@ select = "underline"
 hidden = false
 
 [editor.statusline]
-left = ["mode", "spinner", "read-only-indicator"]
-center = ["file-name"] 
-right = ["diagnostics", "selections","register","position", "file-encoding", "file-line-ending", "file-type"]
+left = [
+    "mode",
+    "spinner",
+    "version-control",
+    "file-modification-indicator",
+    "read-only-indicator",
+]
+
+center = [
+    "file-name",
+]
+
+right = [
+    "diagnostics",
+    "workspace-diagnostics",
+
+    "separator",
+
+    "position",
+    "position-percentage",
+    "total-line-numbers",
+    
+    "separator",
+
+    "file-encoding",
+    "file-line-ending",
+    "file-type",
+]
+
 separator = "│"
-mode.normal = "NORMAL"
-mode.insert = "INSERT"
-mode.select = "SELECT"
-diagnostics = ["warning", "error"]
-workspace-diagnostics = ["warning", "error"]
+
+diagnostics = ["hint", "info", "warning", "error"]
+workspace-diagnostics = ["hint", "info", "warning", "error"]
 
 [editor.lsp]
 display-inlay-hints = true
@@ -29,26 +59,46 @@ display-progress-messages = true
 
 [editor.auto-save]
 focus-lost = true
-after-delay.enable = true
+
+[editor.auto-save.after-delay]
+enable = true
+
+
+[keys.normal.space.l]
+g = [
+    ":write-all",
+    ":new",
+    ":insert-output lazygit >/dev/tty",
+    ":buffer-close!",
+    ":redraw",
+    ":reload-all",
+]
+
+[keys.normal.space.y]
+z = [
+    ":new",
+    ":insert-output yazi >/dev/tty",
+    ":buffer-close!",
+    ":redraw",
+]
 
 [keys.normal]
-# lazy git
-A-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
-# gitui (written in rust)
+# GitUI
 C-g = [
     ":write-all",
     ":new",
     ":insert-output gitui >/dev/tty",
     ":buffer-close!",
     ":redraw",
-    ":reload-all"
+    ":reload-all",
 ]
-# Compile and run using make
+
+# Compile & Run
 C-r = [
     ":write-all",
     ":new",
-    ":insert-output make run > /dev/tty",
+    ":insert-output make run >/dev/tty",
     ":buffer-close!",
     ":redraw",
-    ":reload-all"
+    ":reload-all",
 ]
