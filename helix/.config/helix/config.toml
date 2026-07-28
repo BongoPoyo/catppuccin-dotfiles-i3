@@ -8,7 +8,6 @@ color-modes= true
 cursorline = true
 completion-timeout = 5
 auto-format = true
-popup-border = "all"
 
 [editor.cursor-shape]
 insert = "bar"
