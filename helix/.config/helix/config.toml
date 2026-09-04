@@ -81,23 +81,11 @@ z = [
     ":redraw",
 ]
 
-[keys.normal]
-# GitUI
-C-g = [
-    ":write-all",
+[keys.normal.space.m]
+r = [
     ":new",
-    ":insert-output gitui >/dev/tty",
+    ":insert-output tmux display-popup",
     ":buffer-close!",
     ":redraw",
-    ":reload-all",
 ]
 
-# Compile & Run
-C-r = [
-    ":write-all",
-    ":new",
-    ":insert-output make run >/dev/tty",
-    ":buffer-close!",
-    ":redraw",
-    ":reload-all",
-]
