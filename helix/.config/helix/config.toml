@@ -81,11 +81,4 @@ z = [
     ":redraw",
 ]
 
-[keys.normal.space.m]
-r = [
-    ":new",
-    ":insert-output tmux display-popup",
-    ":buffer-close!",
-    ":redraw",
-]
 
