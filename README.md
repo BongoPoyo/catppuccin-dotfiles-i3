@@ -19,6 +19,10 @@ ssh-keygen -t ed25519 -C "hashir447079@gmail.com"
 ```
 eval "$(ssh-agent -s)"
 ```
+or fish
+```
+ssh-agent -c | source
+```
 3. Add the key
 ```
 
